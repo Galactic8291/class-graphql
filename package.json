@@ -1,0 +1,26 @@
+{
+  "name": "class-graphql",
+  "version": "1.0.0",
+  "description": "Class Project Using Prisma, TypeGraphQL, + Knex",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galactic8291/class-graphql.git"
+  },
+  "keywords": [
+    "Typescript",
+    "Apollo",
+    "Prisma",
+    "TypeGraphQL",
+    "Knex"
+  ],
+  "author": "Robbie McClellan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Galactic8291/class-graphql/issues"
+  },
+  "homepage": "https://github.com/Galactic8291/class-graphql#readme"
+}
