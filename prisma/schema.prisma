@@ -8,11 +8,20 @@ generator typegraphql {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("PRISMA_URL")
 }
 
 model teacher {
-  uuid   String @id @default(dbgenerated())
+  uuid   String   @id @default(dbgenerated())
   name   String
   grades Int[]
+  course course[]
+}
+
+model course {
+  uuid        String   @id @default(dbgenerated())
+  class_name  String
+  description String?
+  teacherUuid String?
+  teacher     teacher? @relation(fields: [teacherUuid], references: [uuid])
 }
