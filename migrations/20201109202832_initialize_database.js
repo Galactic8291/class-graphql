@@ -6,7 +6,7 @@ exports.up = function (knex) {
     knex.schema.withSchema('prisma').createTable('teacher', function (table) {
       table.uuid('uuid').defaultTo(knex.raw('uuid_generate_v4()')).primary()
       table.string('name').notNull()
-      table.specificType('grades', 'text ARRAY')
+      table.specificType('grades', 'integer ARRAY')
     })
   ])
 };
