@@ -4,6 +4,8 @@
   "description": "Class Project Using Prisma, TypeGraphQL, + Knex",
   "main": "app.ts",
   "scripts": {
+    "start": "node build/app.js",
+    "start:dev": "nodemon --exec ts-node src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +24,16 @@
   "bugs": {
     "url": "https://github.com/Galactic8291/class-graphql/issues"
   },
-  "homepage": "https://github.com/Galactic8291/class-graphql#readme"
+  "homepage": "https://github.com/Galactic8291/class-graphql#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.14.7",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
 }
