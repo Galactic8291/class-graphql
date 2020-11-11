@@ -19,9 +19,17 @@ model teacher {
 }
 
 model course {
-  uuid        String   @id @default(dbgenerated())
+  uuid        String    @id @default(dbgenerated())
   class_name  String
   description String?
   teacherUuid String?
-  teacher     teacher? @relation(fields: [teacherUuid], references: [uuid])
+  teacher     teacher?  @relation(fields: [teacherUuid], references: [uuid])
+  student     student[] @relation("CourseToStudent")
+}
+
+model student {
+  uuid   String   @id @default(dbgenerated())
+  name   String
+  grade  Int
+  course course[] @relation("CourseToStudent")
 }
